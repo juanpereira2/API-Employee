@@ -16,6 +16,7 @@ public class Employee {
 	private Long id;
 	private String name;
 	private String role;
+	private Integer age; 
 	
 	 Employee() {}
 	 
@@ -49,6 +50,15 @@ public class Employee {
 	public void setRole(String role) {
 		this.role = role;
 	}
+	
+
+	public Integer getAge() {
+		return age;
+	}
+
+	public void setAge(Integer age) {
+		this.age = age;
+	}
 
 	@Override
 	  public boolean equals(Object o) {
@@ -59,11 +69,11 @@ public class Employee {
 	      return false;
 	    Employee employee = (Employee) o;
 	    return Objects.equals(this.id, employee.id) && Objects.equals(this.name, employee.name)
-	        && Objects.equals(this.role, employee.role);
+	        && Objects.equals(this.role, employee.role) && Objects.equals(this.age, employee.age);
 	  }
 	 @Override
 	 public int hashCode() {
-		 return Objects.hash(this.id,this.name,this.role);
+		 return Objects.hash(this.id,this.name,this.role,this.age);
 	 }
 	 @Override
 	  public String toString() {
